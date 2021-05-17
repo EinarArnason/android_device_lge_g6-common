@@ -679,12 +679,12 @@ lib64/libdovi.so
 # Fast Charge - from H870 V20J
 vendor/bin/hvdcp_opti
 
-# Fingerprint Sensors - from Stock H870 V20I
-vendor/lib/hw/fingerprint.msm8996.so
+# Fingerprint - from H870 V30B
+vendor/bin/hw/vendor.lge.hardware.biometrics.fingerprint@2.1-service
+vendor/etc/init/vendor.lge.hardware.biometrics.fingerprint@2.1-service.rc
 vendor/lib64/hw/fingerprint.msm8996.so
-framework/vendor.qti.hardware.fingerprint-V1.0-java.jar:vendor/framework/vendor.qti.hardware.fingerprint-V1.0-java.jar
-vendor/lib/vendor.qti.hardware.fingerprint@1.0.so
-vendor/lib64/vendor.qti.hardware.fingerprint@1.0.so
+lib/vendor.lge.hardware.biometrics.fingerprint@2.1.so:vendor/lib/vendor.lge.hardware.biometrics.fingerprint@2.1.so
+lib64/vendor.lge.hardware.biometrics.fingerprint@2.1.so:vendor/lib64/vendor.lge.hardware.biometrics.fingerprint@2.1.so
 
 # Postprocessing - from V30B H870
 vendor/etc/qdcm_calib_data_SW49408_1440_2880_cmd_mode_dsc_dsi_panel.xml
