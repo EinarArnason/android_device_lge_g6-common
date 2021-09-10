@@ -50,7 +50,7 @@ static uint32_t applyGamma(const uint32_t brightness){
         return 0;
 
     return LCD_BRIGHTNESS_MIN + LCD_BRIGHTNESS_DELTA *
-        cbrt(((double)brightness - LCD_BRIGHTNESS_MIN)/LCD_BRIGHTNESS_DELTA);
+        sqrt(((double)brightness - (LCD_BRIGHTNESS_MIN + 0.88))/LCD_BRIGHTNESS_DELTA);
 }
 
 static void handleBacklight(const LightState& state) {
