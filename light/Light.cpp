@@ -48,9 +48,10 @@ static void set(std::string path, int value) {
 static uint32_t applyGamma(const uint32_t brightness){
     if(brightness < LCD_BRIGHTNESS_MIN)
         return 0;
-
+    if(brightness == 1)
+        return 1;
     return LCD_BRIGHTNESS_MIN + LCD_BRIGHTNESS_DELTA *
-        sqrt(((double)brightness - (LCD_BRIGHTNESS_MIN + 0.88))/LCD_BRIGHTNESS_DELTA);
+        sqrt(((double)brightness - LCD_BRIGHTNESS_MIN - 0.75)/LCD_BRIGHTNESS_DELTA);
 }
 
 static void handleBacklight(const LightState& state) {
